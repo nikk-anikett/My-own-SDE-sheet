@@ -1,0 +1,22 @@
+class solution{
+	public:
+	vector<int> downwardDigonal(int N, vector<vector<int>> A)
+	{
+		 vector<int> ans;
+		 map<int,vector<int>> mp;
+		 for(int i=0;i<N;i++){
+		     for(int j=0;j<N;j++){
+		        vector<int> temp;
+		        temp=mp[i+j];
+		        temp.push_back(A[i][j]);
+		        mp[i+j]=temp;
+		     }
+		 }
+		 for(auto x:mp){
+		       vector<int> temp=x.second;
+		       for(int i=0;i<temp.size();++i)
+		       ans.push_back(temp[i]);
+		 }
+		 return ans;
+	}
+};
