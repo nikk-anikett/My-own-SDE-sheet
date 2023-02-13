@@ -30,12 +30,12 @@ public:
     }
 };
 int main(){
-    Solution &obj =*(new Solution());
+    Solution *obj =new Solution();
     int k;
     cin>>k;
     vector<int> v,ans;
     v={5,7,7,8,8,10};
-    ans=obj.searchRange(v,k);
+    ans= obj.searchRange(v,k);
     for(int i=0;i<ans.size();i++){
         cout<<ans[i]<<" ";
     }
