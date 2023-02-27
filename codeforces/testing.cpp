@@ -1,34 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-int sol(){
-    int n;
-    cin>>n;
-    vector<int> v(n);
-    int c1=0,c2=0;
-    for(int i=0;i<n;i++){
-        cin>>v[i];
-        (v[i]==1) ? c1++ : c2++;
-    }
-    if(c1==n)
-    return 1;
-    else if(c2%2!=0)
-        return -1;
-    else{
-        int c=0;
-        for(int i=0;i<n;i++){
-            if(c==n/2)
-                return i+1;
-            if(v[i]==2)
-                c++;
-        }
-    }
-    return -1;
-}
 int main() {
 	int t;
 	cin>>t;
-	while(t--){
-	    cout<<sol()<<endl;
-	}
+	vector<int> v(t);
+    int maxn=INT_MIN;
+    vector<int> ans;
+    ans.push_back(0);
+    for(int i=0;i<t;i++){
+        cin>>v[i];
+        ans.push_back(v[i]);
+    }
+    for (int i = 1; i < ans.size(); i++){
+        maxn=max(maxn,ans[i-1]);
+        ans[i]=maxn;
+    }
+    for(int i=0;i<t;i++){
+        v[i]=v[i]-ans[i];
+        cout<<v[i]<<" ";
+    }
 	return 0;
 }
