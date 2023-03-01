@@ -1,24 +1,30 @@
 #include<bits/stdc++.h>
+typedef long long ll;
 using namespace std;
-string sol(){
-    int n;
-    cin>>n;
-    vector<int> v(n);
-    for(int i=0;i<n;i++){
-        cin>>v[i];
+
+ll sol(ll n){
+    ll temp=n;
+    ll sum = 0;
+    while (n>0){
+        int rem=n%10;
+        sum+=rem;
+        n/=10;
     }
-    sort(v.begin(),v.end());
-    int cnt=0;
-    for(int i=1;i<n;i++){
-        if(abs(v[i-1]-v[i]) <= 1)
-            cnt++;
-    }
-    return (n-cnt == 1) ? "yes" : "no";
+    ll ans=__gcd(temp,sum);
+    if(ans>1)
+        return temp;
+    sol(ans);
 }
+
+
+
 int main(){
     int t;
     cin>>t;
-    while(t--)
-    cout<<sol()<<endl;
+    while (t--){
+        ll n;
+        cin>>n;
+        cout<<sol(n)<<endl;
+    }
     return 0;
 }
