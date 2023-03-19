@@ -1,30 +1,46 @@
 #include<bits/stdc++.h>
 using namespace std;
 class node{
-    int data;
+    public:
+    int val;
     node* next;
     node(int x){
-        data=x;
+        val=x;
         next=NULL;
     }
 };
 void merge(node* list1,node* list2){
-    node* n=NULL;
-    node* temp=NULL;
-    while(list1 && list2){
-        if(list1->data > list2->data){
-            n=list2->next
-            n;
+    node* pre=new node(0);
+        node* prev=pre;
+        while(list1 && list2){
+            if(list1->val < list2->val){
+                node* temp=new node(list1->val);
+                prev->next=temp;
+                prev=temp;
+                list1=list1->next;
+            }else{
+                node* temp=new node(list2->val);
+                prev->next=temp;
+                prev=temp;
+                list2=list2->next;
+            }
         }
-        else if(list1->data < list2->data){
-            n=list1->next
-            list1->next=list2;
-            list1=n;
-        }
-        else{
+        while(list1){
+            node* temp=new node(list1->val);
+            prev->next=temp;
+            prev=temp;
             list1=list1->next;
+        }
+        while(list2){
+            node* temp=new node(list2->val);
+            prev->next=temp;
+            prev=temp;
             list2=list2->next;
         }
+    pre=pre->next;
+    while (pre){
+        cout<<pre->val<<" ";
+        pre=pre->next;
     }
 }
 int main(){

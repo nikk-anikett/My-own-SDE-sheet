@@ -24,7 +24,7 @@ int main(){
     arr={10,1,2,7,6,1,5};
     vector<int> res = obj.subsetSums(arr,7);
     for(auto x:res){
-        cout<<x<<endl;
+        cout<<x<<" ";
     }
     return 0;
 }

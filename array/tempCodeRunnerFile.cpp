@@ -1,0 +1,1 @@
+cout<<check(n)<<endl;

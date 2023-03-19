@@ -13,11 +13,8 @@ ll sol(ll n){
     ll ans=__gcd(temp,sum);
     if(ans>1)
         return temp;
-    sol(ans);
+    sol(temp+1);
 }
-
-
-
 int main(){
     int t;
     cin>>t;

@@ -1,23 +1,27 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
+#define vi vector<int>   
+#define rep(i,a,b) for(int i=a;i<b;i++)
+#define ll long long int
 using namespace std;
-int main() {
-	int t;
-	cin>>t;
-	vector<int> v(t);
-    int maxn=INT_MIN;
-    vector<int> ans;
-    ans.push_back(0);
-    for(int i=0;i<t;i++){
-        cin>>v[i];
-        ans.push_back(v[i]);
+string sol(){
+    int n;
+    cin>>n;
+    vi arr(n);
+    int mi=0,bi=0;
+    rep(i,0,n){
+        cin>>arr[i];
+        if(arr[i]%2==0)
+            mi+=arr[i];
+        else
+            bi+=arr[i];
+    }       
+    return ((mi>bi) ? "YES" : "NO");
+}
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+       cout<<sol()<<endl;
     }
-    for (int i = 1; i < ans.size(); i++){
-        maxn=max(maxn,ans[i-1]);
-        ans[i]=maxn;
-    }
-    for(int i=0;i<t;i++){
-        v[i]=v[i]-ans[i];
-        cout<<v[i]<<" ";
-    }
-	return 0;
+    return 0;
 }

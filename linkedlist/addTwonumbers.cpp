@@ -9,44 +9,39 @@ class node{
         next=NULL;
     }
 };
-int reverse(int n){
-    int sum=0;
-    while(n>0){
-        int rem=n%10;
-        n/=10;
-        sum=sum*10+rem;
-    }
-    return sum;
+void print(node* head){
+    cout<<head->val<<" ";
+    head=head->next;
 }
-void res(int num){
-    
-    node* ptr=new node(0);
-    node* temp=ptr;
-    while(num>0){
-        int rem=num%10;
-        num/=10;
-        node* n1=new node(rem);
-        temp->next=n1;
-        temp=temp->next;
-    }
-    while(ptr){
-        cout<<ptr->val<<" ";
-        ptr=ptr->next;
-    }
-}
+
 void addnum(node* l1,node* l2){
-    node* t1=l1;
-    node* t2=l2;
-    int sum1=0,sum2=0;
-    while(t1){
-        sum1=sum1*10+t1->val;
-        t1=t1->next;
+    node* sum=new node(0); 
+    node* prev=sum;
+    int res=0,carry=0;
+    while(l1 or l2 or carry){
+        if(l1){
+            res+=l1->val;
+            l1=l1->next;
+        }
+        if(l2){
+            res+=l2->val;
+            l2=l2->next;
+        }
+        res+=carry;
+        carry=res/10;
+        node* temp=new node(res%10);
+        prev->next=temp;
+        prev=temp;
+        res=0;
     }
-    while(t2){
-        sum2=sum2*10+t2->val;
-        t2=t2->next;
+    
+    sum=sum->next;
+    // print(sum);
+    while (sum){
+        cout<<sum->val<<" ";
+        sum=sum->next;
     }
-    res(reverse(sum1)+reverse(sum2));  
+    
 }
 int main(){
     node* n1=new node(2);
