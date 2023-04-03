@@ -1,27 +1,33 @@
 #include<bits/stdc++.h>
-#define vi vector<int>   
-#define rep(i,a,b) for(int i=a;i<b;i++)
-#define ll long long int
 using namespace std;
-string sol(){
-    int n;
-    cin>>n;
-    vi arr(n);
-    int mi=0,bi=0;
-    rep(i,0,n){
-        cin>>arr[i];
-        if(arr[i]%2==0)
-            mi+=arr[i];
-        else
-            bi+=arr[i];
-    }       
-    return ((mi>bi) ? "YES" : "NO");
-}
 int main(){
-    int t;
-    cin>>t;
-    while(t--){
-       cout<<sol()<<endl;
+    vector<int> arr;
+    arr={4, 4, 3, 5, 22, 1};
+    int n=arr.size();
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]){
+                swap(arr[j],arr[j+1]);
+            }
+        }
+    }
+    for(auto x: arr)
+        cout<<x<<" ";
+
+    void insertionSort(int arr[], int n)
+    {
+        int i, key, j;
+        for (i = 1; i < n; i++)
+        {
+            key = arr[i];
+            j = i - 1;
+            while (j >= 0 && arr[j] > key)
+            {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
+            arr[j + 1] = key;
+        }
     }
     return 0;
 }

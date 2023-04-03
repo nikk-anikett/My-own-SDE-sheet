@@ -1,39 +1,24 @@
 #include<bits/stdc++.h>
 #define ll long long int   
+#define ld long double
 #define vi vector<ll>
-#define rep(i,a,b) for(ll i=a;i<b;i++)
+#define pii pair<int, int>
+#define fi first
+#define se second
+#define pb push_back
+#define all(x) (x).begin(), (x).end()
+#define fill(a, b) memset(a, b, sizeof(a))
+#define inf 1000000000
+#define binf 1e18 + 100
+#define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
-void sol(){
-    ll n,q,sum=0;
-    cin>>n>>q;
-    vi arr(n),temp(n,0);
-    rep(i,0,n){
-       cin>>arr[i];
-       sum+=arr[i];
-    }
-    temp[0]=arr[0];
-    rep(i,1,n){
-        temp[i]=arr[i]+temp[i-1];
-    }
-    while(q--){
-        ll l,r,k,ans=0;
-        cin>>l>>r>>k;
-        for(ll i=l-1;i<=r-1;i++)
-            arr[i]=k;
-        for(ll i=0;i<n;i++){
-            cout<<arr[i]<<" ";
-            ans+=arr[i];
-        }
-            
-        cout<<ans<<endl;
-        cout<<((ans%2==0) ? "NO" : "YES")<<endl;
-    }
+string sol(){
+  return "security";
 }
 int main(){
-    ll t;
-    cin>>t;
-    while(t--){
-       sol();
-    }
+   //  int t;
+   //  cin>>t;
+   //  while(t--)
+       cout<<sol()<<endl;
     return 0;
 }
