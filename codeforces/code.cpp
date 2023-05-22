@@ -12,13 +12,23 @@
 #define binf 1e18 + 100
 #define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
-string sol(){
-  return "security";
+void solve() {
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int cnt=0;
+    rep(i,1,s.length()){
+        if(s[i-1]==s[i])
+            cnt++;
+    }
+    cout<<cnt<<endl;
 }
-int main(){
-   //  int t;
-   //  cin>>t;
-   //  while(t--)
-       cout<<sol()<<endl;
+int main() {
+    // int t;
+    // cin >> t;
+    // while (t--) {
+        solve();
+    // }
     return 0;
 }

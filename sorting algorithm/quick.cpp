@@ -10,7 +10,7 @@ int partition(vector<int> &arr,int s,int e){
     int pIndex=s+cnt;
     swap(arr[s],arr[pIndex]);
     int i=s,j=e;
-    while (i<pIndex and j>pIndex)
+    while (i<pIndex and j>pIndex) 
     {
         while(arr[i]<=arr[pIndex])
             i++;

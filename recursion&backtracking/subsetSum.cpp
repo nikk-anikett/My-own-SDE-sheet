@@ -21,7 +21,7 @@ public:
 int main(){
     Solution &obj=*(new Solution);
     vector<int> arr(7),ans;
-    arr={10,1,2,7,6,1,5};
+    arr={1,2,3};
     vector<int> res = obj.subsetSums(arr,7);
     for(auto x:res){
         cout<<x<<" ";
