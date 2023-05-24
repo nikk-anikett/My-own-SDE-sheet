@@ -13,22 +13,19 @@
 #define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
 void solve() {
-    int n;
-    cin>>n;
-    string s;
-    cin>>s;
-    int cnt=0;
-    rep(i,1,s.length()){
-        if(s[i-1]==s[i])
-            cnt++;
+    int n, res = 0;
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+    	int x; cin >> x;
+    		res = __gcd(res, abs(x - i));
     }
-    cout<<cnt<<endl;
+    cout << res << "\n";
 }
 int main() {
-    // int t;
-    // cin >> t;
-    // while (t--) {
+    int t;
+    cin >> t;
+    while (t--) {
         solve();
-    // }
+    }
     return 0;
 }
