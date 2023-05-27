@@ -13,13 +13,15 @@
 #define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
 void solve() {
-    int n, res = 0;
-    cin >> n;
-    for (int i = 1; i <= n; i++) {
-    	int x; cin >> x;
-    		res = __gcd(res, abs(x - i));
+	int x, k;
+	cin >> x >> k;
+	if (x % k != 0) {
+        cout << 1 << endl;
+    	cout << x << endl;
+    }else{
+        cout << 2 << endl;
+        cout << 1 << " " << x - 1 << endl;
     }
-    cout << res << "\n";
 }
 int main() {
     int t;
