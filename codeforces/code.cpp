@@ -13,21 +13,20 @@
 #define rep(i,a,b) for(int i=a;i<b;i++)
 using namespace std;
 void solve() {
-	int x, k;
-	cin >> x >> k;
-	if (x % k != 0) {
-        cout << 1 << endl;
-    	cout << x << endl;
-    }else{
-        cout << 2 << endl;
-        cout << 1 << " " << x - 1 << endl;
+    ll k,n,w;
+    cin>>k>>n>>w;
+    ll sum=0;
+    for(int i=1;i<=w;i++){
+        sum+=k*i;
     }
+    ll ans=n-sum;
+    cout<<((ans >= 0) ? 0 : abs(ans))<<endl;
 }
+
 int main() {
-    int t;
-    cin >> t;
-    while (t--) {
+    // int t;
+    // cin >> t;
+    // while (t--) 
         solve();
-    }
     return 0;
 }
