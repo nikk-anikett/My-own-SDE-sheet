@@ -1,0 +1,166 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel= "stylesheet" href="port.css"> -->
+    <title>User Details Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>User Details Form</h2>
+        <form id="userForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="output"></div>
+      </div>
+    
+      <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent form submission
+          
+          // Get input values
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+          var age = document.getElementById('age').value;
+          
+          // Display details on the screen
+          var outputDiv = document.getElementById('output');
+          outputDiv.innerHTML = "<p>Name: " + name + "</p>" +
+                                "<p>Email: " + email + "</p>" +
+                                "<p>Age: " + age + "</p>";
+          
+          // Reset the form
+        //   document.getElementById('userForm').reset();
+        });
+      </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel= "stylesheet" href="port.css"> -->
+    <title>User Details Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>User Details Form</h2>
+        <form id="userForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="output"></div>
+      </div>
+    
+      <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent form submission
+          
+          // Get input values
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+          var age = document.getElementById('age').value;
+          
+          // Display details on the screen
+          var outputDiv = document.getElementById('output');
+          outputDiv.innerHTML = "<p>Name: " + name + "</p>" +
+                                "<p>Email: " + email + "</p>" +
+                                "<p>Age: " + age + "</p>";
+          
+          // Reset the form
+        //   document.getElementById('userForm').reset();
+        });
+      </script>
+</body>
+</html>
+

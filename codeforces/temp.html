@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+<body>
+    <div class="container">
+        <h2>User Details Form</h2>
+        <form id="userForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <div id="output"></div>
+      </div>
+    <script>
+        
+
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var name=document.getElementById('name').value;
+        var email=document.getElementById('email').value;
+        var age=document.getElementById('age').value;
+
+        var outputiv=document.getElementById('output');
+        outputiv.innerHTML= "<p>Name: " + name + "</p>" +
+                                "<p>Email: " + email + "</p>" +
+                                "<p>Age: " + age + "</p>";
+        });
+    </script>
+</body>
+</html>
