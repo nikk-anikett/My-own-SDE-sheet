@@ -115,7 +115,7 @@ void stringTrick(){
     auto num=stoll(digit);
 
      
-    transform(begin(s),end(s),begin(s) :: toupper);
+    transform(begin(s),end(s),begin(s), :: toupper);
 }
 void linkedlistTrick(){
     //to create a new linkedlist
