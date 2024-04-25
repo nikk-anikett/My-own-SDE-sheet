@@ -11,7 +11,7 @@ void mathTrick(){
     int ans=__gcd(element1,element2);
 
     //LCM
-    //#include <boost/math/common_factor.hpp>
+    #include <boost/math/common_factor.hpp>
     boost::math::lcm(element1,element2);
 
     //PERMUTATION
@@ -52,8 +52,8 @@ void vectorTrick(){
     vector<int> :: iterator it;
 
     // FIND FUNCTION
-    // it=find(begin(arr),end(arr),search); 
-    // if(it!=arr.end())
+    it=find(begin(arr),end(arr),search); 
+    if(it!=arr.end())
     // return 1;
 
     // 2D VECTOR
@@ -71,23 +71,23 @@ void setTrick(){
     s.clear();
 
     // INSERT
-    // s.insert(value);
-    // FIND FUNCTION
-    // if(s.find(value)!=v.end());
-    //      return true
+    s.insert(value);
+    FIND FUNCTION
+    if(s.find(value)!=v.end());
+         return true
 
     //ERASE
-    // s.erase(value);            
-    // s.erase(s.begin(),s.end()); 
+    s.erase(value);            
+    s.erase(s.begin(),s.end()); 
 }
 void mapTrick(){
-    // map<int,int> mp;
-    // unordered_map<int,int> mp;
+    map<int,int> mp;                  
+    unordered_map<int,int> mp;
 
     //INSERT
-    // mp.insert({key,value});
-    //for counting the frequency
-    // mp[s[i]]++;
+    mp.insert({key,value});
+    for counting the frequency
+    mp[s[i]]++;
 
     map<int,vector<string> mp;
     mp[key].push_back(value);
