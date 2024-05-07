@@ -119,14 +119,29 @@ void stringTrick(){
 }
 void linkedlistTrick(){
     //to create a new linkedlist
-    ListNode *pre=new Listnode(0);
-    ListNode *prev=;
+    ListNode *pre = new ListNode(0);
+    ListNode *prev = pre;
     while(head){
-        ListNode *temp=new Listnode(head->val);
-        prev->next=temp;
-        prev=temp;
+        ListNode *temp = new ListNode(head->val);
+        prev -> next = temp;
+        prev = temp;
     }
-    return pre->next;
+    return pre -> next;
+
+
+
+        ListNode* tail = nullptr;
+        int res = 0;
+        // Process each digit in the sum, starting from the least significant digit
+        while (!s.empty() || res != 0) {
+            tail = new ListNode(0, tail);
+            if (!s.empty()) {
+                res += s.top() * 2; // Double the digit and add the carry
+                s.pop(); // Pop the used digit
+            }
+            tail->val = res % 10; // Store the least significant digit
+            res /= 10; // Update the carry for the next iteration
+        }
 
 }
 void stack_queue(){
