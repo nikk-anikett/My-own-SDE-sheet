@@ -114,6 +114,16 @@ void stringTrick(){
     auto digit=to_string(a);
     auto num=stoll(digit);
 
+
+        // int to char
+        str += static_cast<char>(val);    
+        ///
+        //char to int
+
+        static_cast<int>(value);    
+  
+    
+
      
     transform(begin(s),end(s),begin(s), :: toupper);
 }
