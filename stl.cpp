@@ -101,13 +101,32 @@ void mapTrick(){
 
 }
 void stringTrick(){
-    string s,str;
+    string str;
     //FIND FUNCTION
-    int first = s.find('0'); //return the index of first occurance of search value 
-    int last = s.rfind('0'); ////return the index of last occurance of search value 
+    string s = "Hello, World!";
+    
+    str = s.find('0'); //return the index of first occurance of search value 
+    str = s.rfind('0'); ////return the index of last occurance of search value 
+    str = s.find_first_of("aeiou"); // Find first occurrence of any character in "aeiou"
+    str = s.find_last_of("aeiou"); // Find last occurrence of any character in "aeiou"
+
+    
     if(s.find(str)!=string ::npos)
     return s.find(str); // return index
+
     
+    string sub = s.substr(7, 5);  /// substring
+
+    // From number to string
+    int num = 42;
+    std::string s = std::to_string(num);
+    
+    // From string to number
+    std::string str = "123";
+    int n = std::stoi(str);
+    long l = std::stol(str);
+    float f = std::stof(str);
+        
     //typeCasting
     // string character to number
     int a=s[0]-'0';
